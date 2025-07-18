@@ -9,10 +9,6 @@ from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_experimental.agents import create_pandas_dataframe_agent
 
-# Set environment variable
-groq_api_key = "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"
-with open(".env", "w") as f:
-    f.write(f"GROQ_API_KEY={groq_api_key}\n")
 
 # Load .env file
 load_dotenv()
