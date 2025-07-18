@@ -17,9 +17,6 @@ load_dotenv()
 st.set_page_config(page_title="Excel Analyzer Chatbot", page_icon="🤖")
 st.title("Excel Analyzer Chatbot")
 
-if "history" not in st.session_state:
-    st.session_state.history = []
-
 # Upload Excel file
 uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx"])
 
