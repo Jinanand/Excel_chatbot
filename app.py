@@ -14,8 +14,8 @@ from langchain_experimental.agents import create_pandas_dataframe_agent
 load_dotenv()
 
 # Streamlit page configuration
-st.set_page_config(page_title="📊 Excel Analyzer Chatbot", page_icon="📊")
-st.title("📊 Excel Analyzer Chatbot")
+st.set_page_config(page_title="Excel Analyzer Chatbot", page_icon="🤖")
+st.title("Excel Analyzer Chatbot")
 
 # Upload Excel file
 uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx"])
@@ -25,7 +25,7 @@ if uploaded_file is not None:
     try:
         # Read Excel file
         df = pd.read_excel(uploaded_file)
-        st.success("File uploaded and loaded successfully!")
+        st.success("File uploaded successfully!")
         st.dataframe(df.head())
 
         # Initialize Groq LLM
@@ -36,8 +36,8 @@ if uploaded_file is not None:
         agent = create_pandas_dataframe_agent(llm, df, verbose=True, allow_dangerous_code=True)
 
         # Query input
-        st.subheader("Ask me anything about your data 📣")
-        query = st.text_input("Your question:", placeholder="e.g., Show a pie chart of sales by category")
+        st.subheader("Ask me anything about your data")
+        query = st.text_input("Your question:", placeholder="e.g., How many rows and columns are there?")
 
         if query:
             with st.spinner("Analyzing..."):
