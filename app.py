@@ -15,8 +15,8 @@ load_dotenv()
 
 st.markdown("""
     <style>
-        .main { background-color: #f8f9fa; }
-        h1 { color: #4b4b4b; }
+        .main { background-color: #f8f9ea; }
+        h1 { color: #4b4b4f; }
     </style>
 """, unsafe_allow_html=True)
 
