@@ -1,4 +1,4 @@
-# chatbot_excel_analyzer.py
+# chatbot_excel_analyzer
 
 import os
 import pandas as pd
@@ -50,7 +50,6 @@ if uploaded_file is not None:
                         st.write(response)
 
                     # Show plots if created
-                    st.markdown("**Any generated plots will appear below:**")
                     st.pyplot(plt)  # display current matplotlib figure
 
                 except Exception as e:
