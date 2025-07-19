@@ -13,6 +13,14 @@ from langchain_experimental.agents import create_pandas_dataframe_agent
 # Load .env file
 load_dotenv()
 
+st.markdown("""
+    <style>
+        .main { background-color: #f8f9fa; }
+        h1 { color: #4b4b4b; }
+    </style>
+""", unsafe_allow_html=True)
+
+
 # Streamlit page configuration
 st.set_page_config(page_title="Excel Analyzer Chatbot", page_icon="🤖")
 st.title("Excel Analyzer Chatbot")
