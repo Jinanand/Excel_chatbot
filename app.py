@@ -15,10 +15,11 @@ load_dotenv()
 
 st.markdown("""
     <style>
-        .main { background-color: #f8f9ea; }
-        h1 { color: #4b4b4f; }
+        .main { background-color: #ffcccc; } /* Light red background */
+        h1 { color: #007bff; } /* Bootstrap blue */
     </style>
 """, unsafe_allow_html=True)
+
 
 
 # Streamlit page configuration
