@@ -46,9 +46,9 @@ if uploaded_file is not None:
 
                     # Display text response
                     if isinstance(response, pd.DataFrame):
-                    st.dataframe(response)
+                        st.dataframe(response)
                     elif isinstance(response, str):
-                    st.write(response)
+                        st.write(response)
 
                     # Show plots if created
                     st.pyplot(plt)  # display current matplotlib figure
