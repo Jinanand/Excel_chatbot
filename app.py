@@ -30,7 +30,7 @@ if uploaded_file is not None:
 
         # Initialize Groq LLM
         groq_api_key = os.getenv("GROQ_API_KEY")
-        llm = ChatGroq(temperature=0, model_name="meta-llama/llama-guard-4-12b", api_key=groq_api_key)
+        llm = ChatGroq(temperature=0, model_name="llama-3.3-70b-versatile", api_key=groq_api_key)
 
         # Create agent
         agent = create_pandas_dataframe_agent(llm, df, verbose=True, allow_dangerous_code=True)
